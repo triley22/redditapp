@@ -14,14 +14,12 @@
 
 $grid-float-breakpoint: 20px;
 
-@import "bootstrap-sprockets";
 @import "bootstrap";
 
 body {
 	background: #50C9C3; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, #50C9C3 , #96DEDA); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #50C9C3 , #96DEDA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	padding-top: 60px;           
+	background: linear-gradient(to left, #50C9C3 , #96DEDA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */         
 }
 
 #logo {
@@ -38,11 +36,13 @@ body {
 #main-content {
 	#content {
 		float: none;
+		padding-top: 25px;
 	}
 	padding-bottom: 100px;
 	.link {
 		padding: 2em 1em;
 		border-bottom: 1px solid #e9e9e9;
+		font-size: 20px;
 		.title {
 
 			a {
