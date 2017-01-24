@@ -1,24 +1,35 @@
-# README
+Ruby Version '2.3.1'
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The application is fully responsive for mobile, tablets, and desktop viewports.
 
-Things you may want to cover:
+# Overview
 
-* Ruby version
+Reddit Application
+=======
 
-* System dependencies
+Upon visiting the web application users can login to submit links, comment on links, and upvote or downvote any links that have been submitted.
 
-* Configuration
+#### Outline of Reddit Application
 
-* Database creation
+This is my capstone project which was created as part of the Thinkful course "Essentials of Full Stack Development in Rails." My Reddit Application is modeled after the social news, web content rating, and discussion website https://www.reddit.com.
 
-* Database initialization
+#### What I Learned Making This Application
+As part of the course curriculum I learned how to:
 
-* How to run the test suite
+1. Create models
+    * Models created are:
+  	* Comment
+  	* Submit Link
+    * User
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Create Controllers
+    * Controllers created are:
+   	* Application Controller
+   	* Comments Controller
+   	* Links Controller
+   	* Votes Controller
 
-* Deployment instructions
-
-* ...
+4. Implement Functionality Using the Above-Mentioned Controllers and Models With Their Views
+   * Upvote links
+   * Downvote links
+   * Submitting new links

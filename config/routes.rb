@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'votes/show'
+
   resources :comments
   
   devise_for :users
