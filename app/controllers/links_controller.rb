@@ -1,7 +1,8 @@
 class LinksController < ApplicationController
-  before_action :set_link, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :authorized_user, only: [:edit, :update, :destroy]
+  before_action :set_link, only: [:show, :edit, :update, :destroy, :vote]
+  before_action :authenticate_user!, except: [:index, :show, :vote]
+  before_action :authorized_user, only: [:edit, :update, :destroy, :vote]
+  respond_to :js, :json, :html
 
   # GET /links
   # GET /links.json
@@ -63,16 +64,24 @@ class LinksController < ApplicationController
     end
   end
 
-  def upvote
-    @link = Link.find(params[:id])
-    @link.upvote_by current_user
-    redirect_to :back
-  end
+  # def upvote
+  #   @link = Link.find(params[:id])
+  #   @link.upvote_by current_user
+  #   redirect_to :back
+  # end
  
-  def downvote
-    @link = Link.find(params[:id])
-    @link.downvote_by current_user
-    redirect_to :back
+  # def downvote
+  #   @link = Link.find(params[:id])
+  #   @link.downvote_by current_user
+  #   redirect_to :back
+  # end
+
+  def vote
+    if !current_user.liked? @link 
+      @link.liked_by current_user
+    elsif current_user.liked? @link 
+      @link.unliked_by current_user
+    end
   end
 
   private
