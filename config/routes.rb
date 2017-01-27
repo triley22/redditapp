@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'votes/create'
+
+  get 'votes/destroy'
+
   get 'votes/show'
 
   resources :comments

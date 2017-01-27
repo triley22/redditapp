@@ -2,9 +2,16 @@ require 'rails_helper'
 
 RSpec.describe VotesController, type: :controller do
 
-  describe "GET #show" do
+  describe "GET #create" do
     it "returns http success" do
-      get :show
+      get :create
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #destroy" do
+    it "returns http success" do
+      get :destroy
       expect(response).to have_http_status(:success)
     end
   end

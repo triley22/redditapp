@@ -76,13 +76,13 @@ class LinksController < ApplicationController
   #   redirect_to :back
   # end
 
-  def vote
-    if !current_user.liked? @link 
-      @link.liked_by current_user
-    elsif current_user.liked? @link 
-      @link.unliked_by current_user
-    end
-  end
+  # def vote
+  #   if !current_user.liked? @link 
+  #     @link.liked_by current_user
+  #   elsif current_user.liked? @link 
+  #     @link.unliked_by current_user
+  #   end
+  # end
 
   private
 
