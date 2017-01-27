@@ -1,8 +1,7 @@
 class LinksController < ApplicationController
-  before_action :set_link, only: [:show, :edit, :update, :destroy, :vote]
-  before_action :authenticate_user!, except: [:index, :show, :vote]
-  before_action :authorized_user, only: [:edit, :update, :destroy, :vote]
-  respond_to :js, :json, :html
+  before_action :set_link, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authorized_user, only: [:edit, :update, :destroy]
 
   # GET /links
   # GET /links.json

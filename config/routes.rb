@@ -6,8 +6,17 @@ Rails.application.routes.draw do
   get 'votes/show'
 
   resources :comments
+
+  resources :votes 
+  #   do
+  #   member do 
+  #     put "like", to: "links#vote"
+  #   end
+  #   resources :comments
+  # end
   
   devise_for :users
+
   resources :links do 
     member do
       put "like",    to: "links#vote"
