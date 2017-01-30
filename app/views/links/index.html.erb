@@ -6,15 +6,16 @@
     </h2>
 		<div class="btn group">
 			<a class="btn btn-default btn-primary btn-sm" href="<%= link.url %>">Visit Link</a>
-			<%= link_to like_link_path(link), method: :put, class: "btn btn-secondary btn-sm" do %>
-			<span class="glyphicon glyphicon-chevron-up"></span>
-			Upvote
-			<%= link.get_upvotes.size %>
+
+			<%= link_to vote_link_path(link), method: :post, data: { remote: true  }, class: "btn btn-secondary btn-sm upvote-btn" do %>
+			  <span class="glyphicon glyphicon-chevron-up"></span>
+			  Upvote
+        <span class="upvotes-count"><%= link.get_likes.size %></span>
 			<% end %>
-			<%= link_to like_link_path(link), method: :put, class: "btn btn-secondary btn-sm" do %>
-			<span class="glyhicon glyphicon-chevron-down"></span>
+			<%= link_to vote_link_path(link), method: :delete, data: { remote: true }, class: "btn btn-secondary btn-sm downvote-btn", rel: "nofollow" do %>
+			  <span class="glyhicon glyphicon-chevron-down"></span>
 				Downvote
-			<%= link.get_downvotes.size %>
+			  <span class="downvotes-count"><%= link.get_downvotes.size %></span>
 			<% end %>
 		</div>
   </div>

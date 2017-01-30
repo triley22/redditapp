@@ -3,23 +3,23 @@
 </div>
 
 <div class="btn-group">
-	<%= link_to 'Visit Link', @link.url, class: "btn btn-primary btn-sm" %>
+  <%= link_to 'Visit Link', @link.url, class: "btn btn-primary btn-sm" %>
 </div>
 
 
-<%= link_to like_link_path(@link), class:"like-btn", method: :put, remote: :true do %>
+<%= link_to vote_link_path(@link), class:"like-btn", method: :post, data: { remote: true } do %>
 <div>
   <span><p><i class="fa fa-thumbs-up"></i></p></span>
 </div>
 <% end %>
 
 <div class="btn-group pull-right">
-  <%= link_to like_link_path(@link), method: :put, class: "like-btn" do %>
+  <%= link_to vote_link_path(@link), method: :post, class: "like-btn" do %>
     <span class="glyphicon glyphicon-chevron-up"></span>
     Upvote
     <%= @link.get_upvotes.size %>
   <% end %>
-  <%= link_to like_link_path(@link), method: :put, class: "like-btn" do %>
+  <%= link_to vote_link_path(@link), method: :post, class: "like-btn" do %>
     <span class="glyphicon glyphicon-chevron-down"></span>
     Downvote
     <%= @link.get_downvotes.size %>

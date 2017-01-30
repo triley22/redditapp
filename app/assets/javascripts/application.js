@@ -10,19 +10,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-
-$(document).ready(function() {
-	$("upvote").click(function() {
-		var upvote = $.post("/upvote", {changeBy: 1}, function(dataBack) {
-
-			$("#upvote").text(dataBack);
-		});
-	});
-
-	$("#downvote").click(function() {
-		var downvote = $.post("/downvote", {changeBy: 1},
-			function(dataBack){
-				$("#downvote").text(dataBack);
-			});
-	});
-});
+//= require votes

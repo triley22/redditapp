@@ -12,5 +12,5 @@ describe User do
     it 'returns name of user' do 
       expect(user.name).to eq('John')
     end
-end
+  end
 end

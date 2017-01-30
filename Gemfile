@@ -17,9 +17,18 @@ gem 'record_tag_helper'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'email_spec'
   gem 'factory_girl_rails'
-  gem 'shoulda-matchers'
+  gem 'launchy'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers', require: false
 end
 
 group :development do

@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :links
   acts_as_voter
+
+  validates :name, presence: true
 end
