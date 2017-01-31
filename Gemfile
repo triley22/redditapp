@@ -14,6 +14,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'acts_as_votable'
 gem 'simple_form'
 gem 'record_tag_helper'
+gem 'octicons_helper'
 
 group :development, :test do
   gem 'byebug', platform: :mri
