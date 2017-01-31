@@ -13,7 +13,7 @@
 			<% end %>
 			<%= link_to vote_link_path(link), method: :delete, data: { remote: true }, class: "btn btn-secondary btn-sm downvote-link", rel: "nofollow" do %>
 				<%= octicon "thumbsdown" %>
-			  <span class="downvotes-count"><%= link.get_downvotes.size %></span>
+			  <span class="downvotes-count"><%= link.get_likes.size %></span>
 			<% end %>
 		</div>
   </div>

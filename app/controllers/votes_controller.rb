@@ -22,7 +22,7 @@ class VotesController < ApplicationController
 
     respond_with @link
   end
-
+  
   private
 
   def set_link
