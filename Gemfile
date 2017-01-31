@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
 
 gem 'rails', '~> 5.0.1'
 gem 'sqlite3'
@@ -13,6 +12,7 @@ gem 'devise'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'acts_as_votable'
 gem 'simple_form'
+gem 'responders'
 gem 'record_tag_helper'
 gem 'octicons_helper'
 
