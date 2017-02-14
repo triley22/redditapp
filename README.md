@@ -17,13 +17,11 @@ This is my capstone project which was created as part of the Thinkful course "Es
 As part of the course curriculum I learned how to:
 
 1. Create models
-    * Models created are:
   	* Comment
   	* Submit Link
     * User
 
 3. Create Controllers
-    * Controllers created are:
    	* Application Controller
    	* Comments Controller
    	* Links Controller
@@ -32,4 +30,4 @@ As part of the course curriculum I learned how to:
 4. Implement Functionality Using the Above-Mentioned Controllers and Models With Their Views
    * Upvote links
    * Downvote links
-   * Submitting new links
+   * Submit new links
