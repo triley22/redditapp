@@ -25,7 +25,6 @@ As part of the course curriculum I learned how to:
    	* Application Controller
    	* Comments Controller
    	* Links Controller
-   	* Votes Controller
 
 4. Implement Functionality Using the Above-Mentioned Controllers and Models With Their Views
    * Upvote links
